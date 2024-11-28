@@ -1,0 +1,143 @@
+.success {
+  text-align: center;
+
+  h2 {
+    color: seagreen;
+  }
+
+  a {
+    display: block;
+  }
+}
+
+.checkout-form {
+  padding: 2em;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.15);
+
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  height: max-content;
+  width: 443px;
+  top: 0;
+  bottom: 0;
+
+  padding-bottom: 10px;
+  font-size: 25px;
+
+  p {
+    text-align: center;
+  }
+
+  label {
+    min-width: 500px;
+    color: #6b7c93;
+    font-weight: 300;
+    letter-spacing: 0.025em;
+  }
+
+  input,
+  .StripeElement {
+    display: block;
+    margin: 10px 0 20px 0;
+    padding: 10px 14px;
+    font-size: 20px;
+    font-family: "Source Code Pro", monospace;
+    box-shadow: rgba(50, 50, 93, 0.14902) 0px 1px 3px,
+      rgba(0, 0, 0, 0.0196078) 0px 1px 0px;
+    border: 0;
+    outline: 0;
+    border-radius: 4px;
+    background: white;
+
+    font-size: 18px;
+    ::placeholder {
+      color: #aab7c4;
+    }
+
+    :focus,
+    .StripeElement--focus {
+      box-shadow: rgba(50, 50, 93, 0.109804) 0px 4px 6px,
+        rgba(0, 0, 0, 0.0784314) 0px 1px 3px;
+      -webkit-transition: all 150ms ease;
+      transition: all 150ms ease;
+    }
+  }
+
+  .order-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    text-decoration: none;
+    margin-top: 5%;
+    background-color: #008cdd;
+    border: 1px solid #008cdd;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    width: 200px;
+    transition: opacity 200ms;
+    cursor: pointer;
+
+    .success {
+      background-color: seagreen;
+      border-color: seagreen;
+    }
+
+    :hover {
+      opacity: 0.8;
+    }
+    :disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  a {
+    display: block;
+    text-align: center;
+    margin-top: 1em;
+  }
+  .card-errors {
+    color: red;
+    align-items: left;
+    font-size: 20px;
+  }
+}
+
+.checkout-project-name {
+  padding: 10px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.checkout-form-project-name {
+  font-size: 30px;
+  font-weight: 500;
+}
+.checkout-butons {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.chk-button {
+  background-color: #046daa;
+  border: none;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  height: 54px;
+  padding: 5px 20px;
+  font-weight: bold;
+  border-radius: 35px;
+  width: 132px;
+}

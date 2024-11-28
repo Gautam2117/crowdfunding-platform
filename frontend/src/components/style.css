@@ -1,0 +1,685 @@
+/* body {
+  background-image: url("../images/moneytree.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+} */
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/moneytree.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.5; /* Set the opacity for the background image */
+  z-index: -1; /* Send the pseudo-element to the back */
+}
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.top-nav-bar {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  position: sticky;
+  top: 0;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 20px;
+  padding-top: 20px;
+  background-color: #046daa;
+  width: 100%;
+  font-weight: bold;
+  font-size: large;
+  margin-right: 10px;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+/* .top-nav-bar a {
+  align-self: flex-end;
+  margin-right: 15px;
+  text-align: right;
+  align-items: flex-start;
+  text-decoration: none;
+
+  font-size: 20px;
+  padding: 10px;
+} */
+/* .top-nav-bar a:active {
+  background-color: white !important;
+  color: #046daa !important;
+  border-radius: 30px;
+}
+
+.top-nav-bar a:focus {
+  background-color: white;
+  color: #046daa;
+  border-radius: 30px;
+}
+.top-nav-bar a::selection {
+  background-color: white !important;
+  color: #046daa !important;
+  border-radius: 30px;
+} */
+/* .top-nav-bar a:hover {
+  background-color: white;
+  color: #046daa;
+  border-radius: 30px;
+} */
+.nav-bar-inactive-item {
+  background-color: #046daa;
+  color: white;
+  border-radius: 30px;
+
+  align-self: flex-end;
+  margin-right: 15px;
+  text-align: right;
+  align-items: flex-start;
+  text-decoration: none;
+
+  font-size: 20px;
+  padding: 10px;
+}
+.nav-bar-active-item {
+  background-color: white;
+  color: #046daa;
+  border-radius: 30px;
+
+  align-self: flex-end;
+  margin-right: 15px;
+  text-align: right;
+  align-items: flex-start;
+  text-decoration: none;
+
+  font-size: 20px;
+  padding: 10px;
+}
+
+.nav-bar-links {
+  display: flex;
+}
+.top-nav-bar > div {
+  flex-shrink: 0;
+}
+
+.logo-container {
+  text-align: left;
+  margin: auto;
+  cursor: pointer;
+  margin-left: 30px;
+  align-items: center;
+  display: flex;
+  font-size: 23px;
+  width: 500px;
+}
+.nav_buttons {
+  background-color: white;
+  font-size: smaller;
+  height: 46px;
+  width: 150px;
+  font-weight: bold;
+  color: #046dac;
+  padding: 5px;
+}
+.welcome_name {
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  /* color: white; 
+  -webkit-text-stroke: 2px black;
+  text-stroke: 2px white;
+  font-size: 40px; */
+}
+
+@media (max-width: 800px) {
+  .top-nav-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .top-nav-bar a {
+    margin-top: 10;
+    align-items: center;
+    text-decoration: none;
+  }
+}
+
+.center-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 175px;
+  margin-top: 65px;
+  width: 100%;
+  font-weight: bolder;
+  font-size: 35px;
+}
+p.center-section {
+  font-size: 30px;
+}
+.image-placeholder {
+  height: 200px;
+}
+.project_created_by {
+  font-weight: bold;
+}
+.project_box_funds {
+  font-weight: bold;
+}
+.create_project-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: hidden;
+  background: white;
+  border: white;
+  border-radius: 30px;
+  width: 70%;
+  width: 750px;
+
+  height: auto;
+
+  padding-bottom: 20px;
+  padding-left: 20px;
+  margin: auto;
+  margin-top: 30px;
+  padding-top: 10px;
+}
+.createForm {
+  font-weight: bold;
+  font-size: 20px;
+}
+.form-label {
+  display: flex;
+  margin-bottom: 8px;
+  align-items: center;
+}
+
+.form-input {
+  margin-bottom: 16px;
+  width: 500px;
+  font-size: 20px;
+}
+
+.footer {
+  position: fixed;
+  height: 30px;
+  bottom: 0;
+  right: 0;
+  padding: 5px;
+  text-align: right;
+  padding-top: 0px;
+  padding-bottom: 20px;
+  width: 100%;
+  background-color: #8799f6;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 50vh;
+  width: 604px;
+  padding-bottom: 20px;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.15);
+  margin: auto;
+
+  border-left-width: 1px;
+  border-right-width: 1px;
+  background-color: white;
+  border-radius: 35px;
+
+  font-size: 20px;
+}
+
+.login-form {
+  max-width: 300px;
+  width: 100%;
+}
+
+.register-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 50vh;
+  width: 604px;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin: auto;
+  padding-bottom: 20px;
+
+  border-left-width: 1px;
+  border-right-width: 1px;
+  background-color: white;
+  border-radius: 35px;
+  box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.15);
+
+  font-size: 20px;
+}
+
+.register-form {
+  max-width: 300px;
+  width: 100%;
+}
+
+.left {
+  display: flex;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.form-input {
+  flex-grow: 1;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  height: 45px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 25px;
+}
+
+@media (min-width: 800px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 35px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .section {
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1;
+    margin-right: 20px;
+  }
+}
+
+.title-active-projects {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 15px;
+
+  /* color: white; 
+  -webkit-text-stroke: 2px black;
+  text-stroke: 2px white; */
+}
+.success {
+  color: "Green";
+  width: 800px;
+  margin: 0 auto;
+  position: absolute;
+  top: 30%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 25px;
+
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: max-content;
+  margin-bottom: 0px;
+  /* border-bottom-width: 100px; */
+  padding-bottom: 50px;
+  padding-top: 50px;
+  font-size: larger;
+}
+.projectlist {
+  margin-top: 30px;
+}
+
+.project_box {
+  padding-bottom: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-block: 1px;
+  margin-top: 40px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  background-color: white;
+  border-radius: 35px;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.15);
+}
+.project_box_desc {
+  font-size: 20px;
+  font-weight: bold;
+}
+.active-projects {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-top: auto;
+}
+.name_and_button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+}
+.box_buttons {
+  display: flex;
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  width: 250px;
+}
+
+.project_box_donate_button {
+  border: none;
+
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #046daa;
+  color: white;
+  font-weight: bolder;
+  border-radius: 35px;
+
+  height: 54px;
+  padding: 5px 15px;
+  margin-left: 10px;
+  font-size: 18px;
+}
+.project_box_name {
+  font-size: 30px;
+}
+.project_box_edit_button {
+  background-color: #046daa;
+  border: none;
+  color: white;
+  border-radius: 35px;
+
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  height: 55px;
+  padding: 5px 20px;
+  padding-bottom: 10px;
+  font-weight: bolder;
+}
+.project_box_pic {
+  width: 400px;
+  height: 300px;
+}
+.btn_create {
+  background-color: #046daa;
+  border: none;
+  color: white;
+  border-radius: 35px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  height: 54px;
+  padding: 5px 20px;
+  width: 132px;
+}
+.button {
+  background-color: #046daa;
+  border: none;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  height: 54px;
+  padding: 5px 20px;
+  font-weight: bold;
+  border-radius: 35px;
+}
+
+.edit_project_container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: hidden;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: hidden;
+  background: white;
+  border: white;
+  border-radius: 30px;
+  width: 70%;
+  width: 750px;
+
+  height: auto;
+
+  padding-bottom: 20px;
+  padding-left: 20px;
+  margin: auto;
+  margin-top: 30px;
+  padding-top: 10px;
+}
+.edit_button_panel {
+  display: flex;
+  justify-content: space-between;
+}
+.create_box_buttons {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-radius: 35px;
+}
+.donation_project_name {
+  font-size: 1.3em;
+}
+.donation_box {
+  padding: 7px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-block: 1px;
+  margin-top: 40px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  background: white;
+  border: white;
+  border-radius: 40px;
+  width: 100%;
+  font-size: 20px;
+  box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.15);
+}
+
+.create-project-reward {
+  display: none;
+}
+.form-label-reward {
+  display: flex;
+  justify-content: flex-start;
+  padding-right: 20px;
+  padding-bottom: 30px;
+
+  height: 30px;
+  width: 650px;
+  align-items: center;
+}
+.add-reward-checkbox {
+  padding-left: 20px;
+  font-weight: bold;
+}
+.reward-checkbox {
+  height: 30px;
+  width: 20px;
+}
+.projects-fundings {
+  display: flex;
+  height: 45px;
+  justify-content: center;
+  font-weight: bold;
+  background-color: white;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  border-radius: 20px;
+}
+/* .projects-fundings a {
+  padding-right: 20px;
+  cursor: pointer;
+  font-size: 30px;
+  color: #035788;
+} */
+.fundings {
+  margin: auto;
+
+  min-height: 100vh;
+  margin-top: auto;
+}
+.fundings p {
+  font-weight: bold;
+  font-size: large;
+}
+.dash-link-active {
+  color: black;
+  padding-right: 20px;
+  cursor: pointer;
+  font-size: 25px;
+}
+.dash-link-inactive {
+  padding-right: 20px;
+  cursor: pointer;
+  font-size: 25px;
+  color: #035788;
+}
+.dash-heading {
+  font-size: 30px;
+  font-weight: 650;
+  padding: 10px;
+}
+.funding {
+  margin: auto;
+
+  min-height: 100vh;
+  margin-top: auto;
+}
+.no_data {
+  margin: 0 auto;
+  position: absolute;
+  top: 30%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.userproject {
+  width: 55%;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  min-height: 100vh;
+  margin: auto;
+}
+.userproject p {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.inputcheck {
+  width: 93%;
+}
+
+.donation_box {
+  border-block: 1px;
+  margin-bottom: 15px;
+
+  border-radius: 30px;
+  padding: 10px;
+  margin-bottom: 20px;
+  display: block;
+  width: 500px;
+}
+
+.donation_box_funds {
+  font-weight: bold;
+}
+#funded {
+}
+
+.box_buttons_dash {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 10px;
+  display: flex;
+  width: auto;
+}
+.editForm {
+  font-weight: bold;
+  font-size: 20px;
+}
+.project_box_pic {
+  max-width: 100%;
+}
+.donation_amount {
+  width: 372px;
+}
